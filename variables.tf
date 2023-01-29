@@ -36,3 +36,11 @@ variable "ssh_key" {
 variable "install_setup" {
   default = "/home/danijarvis/github/api-model-template-infra/terraform/scripts/install-setup.sh"
 }
+
+variable "access_key" {
+  default = "TF_VAR_username"
+}
+
+variable "secret_key" {
+  default = "TF_VAR_password"
+}
