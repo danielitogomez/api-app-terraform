@@ -1,20 +1,20 @@
 
-data "template_file" "init" {
-  template = file(var.install_setup)
-}
+##data "template_file" "init" {
+##  template = file(var.install_setup)
+##}
 
-resource "aws_key_pair" "java-app" {
-  key_name   = "java-app"
-  public_key = file(var.ssh_key)
-}
+##resource "aws_key_pair" "java-app" {
+##  key_name   = "java-app"
+##  public_key = file(var.ssh_key)
+##}
 
 resource "aws_instance" "java-app" {
   ami                         = var.ami
   instance_type               = var.instance_type
-  key_name                    = aws_key_pair.java-app.key_name
+#  key_name                    = aws_key_pair.java-app.key_name
   vpc_security_group_ids      = [aws_security_group.sg_allow_tf-ec2.id]
   subnet_id                   = aws_subnet.public-subnet-1.id
-  user_data                   = file(var.install_setup)
+#  user_data                   = file(var.install_setup)
   associate_public_ip_address = true
   tags = {
     Name = "java-app"

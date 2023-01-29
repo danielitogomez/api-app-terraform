@@ -29,13 +29,13 @@ variable "instance_type" {
   default     = "t2.micro"
 }
 
-variable "ssh_key" {
-  default = "/home/ec2-user/.ssh/id_rsa/.ssh/id_rsa_ec2_key.pub"
-}
-
-variable "install_setup" {
-  default = "/home/ec2-user/api-app-terraform/scripts/install-setup.sh"
-}
+#variable "ssh_key" {
+#  default = "/home/ec2-user/.ssh/id_rsa/.ssh/id_rsa_ec2_key.pub"
+#}
+#
+#variable "install_setup" {
+#  default = "/home/ec2-user/api-app-terraform/scripts/install-setup.sh"
+#}
 
 variable "access_key" {
   default = ""
