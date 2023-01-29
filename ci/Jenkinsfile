@@ -11,9 +11,9 @@ pipeline {
         stage('Terraform Plan') {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'terraform-creds', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
-                    sh "export TF_VAR_username=$USERNAME"
-                    sh "export TF_VAR_password=$PASSWORD"
                     sh '''
+                        export TF_VAR_username=$USERNAME
+                        export TF_VAR_password=$PASSWORD
                         terraform plan -var "access_key=$TF_VAR_username" -var "secret_key=$TF_VAR_password"
                     '''
                 }
