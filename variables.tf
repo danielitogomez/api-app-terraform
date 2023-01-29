@@ -30,11 +30,11 @@ variable "instance_type" {
 }
 
 variable "ssh_key" {
-  default = "/home/danijarvis/.ssh/id_rsa_ec2_key.pub"
+  default = "/home/ec2-user/.ssh/id_rsa/.ssh/id_rsa_ec2_key.pub"
 }
 
 variable "install_setup" {
-  default = "/home/danijarvis/github/api-model-template-infra/terraform/scripts/install-setup.sh"
+  default = "/home/ec2-user/api-app-terraform/scripts/install-setup.sh"
 }
 
 variable "access_key" {
