@@ -38,9 +38,9 @@ variable "install_setup" {
 }
 
 variable "access_key" {
-  default = "TF_VAR_username"
+  default = ""
 }
 
 variable "secret_key" {
-  default = "TF_VAR_password"
+  default = ""
 }
